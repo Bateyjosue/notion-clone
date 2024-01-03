@@ -5,8 +5,44 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notion Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body class="flex flex-col">
+    <header class="flex justify-between p-6 text-gray-400">
+      <div class="flex items-center justify-center gap-8">
+        <span class="material-symbols-outlined"
+          >keyboard_double_arrow_right</span
+        >
+        <ul class="flex items-center justify-center gap-4">
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span class="underline">Main</span>
+          </li>
+          <li>/</li>
+          <li>Getting started</li>
+          <li>/</li>
+          <li>Front-end developer test proje...</li>
+        </ul>
+      </div>
+      <div class="flex items-center justify-center">
+        <ul class="flex gap-6">
+          <li class="flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined">lock</span>
+            <span>Editing</span>
+          </li>
+          <li>|</li>
+          <li
+            class="flex items-center justify-center gap-2 font-bold text-blue-700"
+          >
+            <span>Publish Space</span>
+            <span class="material-symbols-outlined">expand_more</span>
+          </li>
+        </ul>
+      </div>
+    </header>
     <section class="grow-0">
       <div class="wrapper">
         <h1 class="text-4xl font-bold border-b-[1px] border-gray-400 py-4 my-4">
