@@ -24,7 +24,7 @@ note create with a `/` command to add a heading to the created text. just like i
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://notion-clone-jb.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -47,19 +47,19 @@ Clone this repository to your desired folder:
   git clone https://github.com/Bateyjosue/notion-clone.git
   
   cd notion-clone
-  
+
 ```
+  [-] Install dependencies of the project using `npm` package manager
+
+    $ npm i || npm install
 ### Run tests
 
-To run tests, run the following command:
+    $ npm run dev
 
-you can use the live server to in the browser and then navigate to the link
+After the server is runned open your brower and browse to the following address: 
 
-```
-localhost:5001
-```
-
-or just the `index.html` file in the browser by right click and the select open with your browser
+    http://localhost:5173/
+  
 
 ### Deployment
 

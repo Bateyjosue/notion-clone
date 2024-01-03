@@ -66,9 +66,8 @@ editor.addEventListener('click', (e) => {
       handleCreateInput();
     }
     
-  
     getLastElement().addEventListener('keypress', event => {
-      event.stopPropagation();
+      // event.stopPropagation();
       if (event.key === 'Enter') {
         if (event.target.value === '/1') {
           
