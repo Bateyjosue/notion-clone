@@ -43,6 +43,44 @@
         </ul>
       </div>
     </header>
+    <section class="wrapper">
+      <div
+        class="flex items-center justify-between p-2 rounded-md text-gray-400 border"
+      >
+        <div>
+          <ul class="flex items-center gap-4">
+            <li class="bg-green-200 rounded-md p-2 font-bold">P</li>
+            <li>|</li>
+            <li class="flex items-center gap-1">
+              <span class="material-symbols-outlined">timer</span>
+              <span>0min</span>
+            </li>
+            <li>|</li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined">account_circle</span>
+            </li>
+            <li>|</li>
+            <li class="flex items-center gap-1">
+              <span class="material-symbols-outlined">south_west</span>
+              <span>0</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="flex items-center gap-4">
+            <li>
+              <span class="material-symbols-outlined"> task_alt </span>
+            </li>
+            <li class="text-green-500">
+              <span class="material-symbols-outlined">cloud</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">more_vert</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section class="grow-0">
       <div class="wrapper">
         <h1 class="text-4xl font-bold border-b-[1px] border-gray-400 py-4 my-4">
@@ -58,6 +96,13 @@
     <section id="editor" class="grow my-4 min-h-96 max-h-full wrapper">
       <div id="app" class="min-w-full min-h-full flex flex-col"></div>
     </section>
+    <footer>
+      <div
+        class="fixed buottom-6 right-6 rounded-md bg-gray-300 h-8 w-8 flex justify-center items-center"
+      >
+        <span class="material-symbols-outlined opacity-55">help</span>
+      </div>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
