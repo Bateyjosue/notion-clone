@@ -93,12 +93,45 @@
         </p>
       </div>
     </section>
-    <section id="editor" class="grow my-4 min-h-96 max-h-full wrapper">
+    <section
+      id="editor"
+      class="grow my-4 min-h-96 max-h-full wrapper cursor-text"
+    >
       <div id="app" class="min-w-full min-h-full flex flex-col"></div>
+      <div class="popdown border rounded-md w-72 h-96">
+        <div class="text-light flex flex-col gap-2 p-2">
+          <h2 class="font-bold">Add blocks</h2>
+          <p class="text-sm text-gray-400">
+            Keep typing to filter, or escape to exit
+          </p>
+          <span class="text-gray-500"
+            >Filtering keyword
+            <span class="bg-blue-900 text-white px-1 py-0.8 rounded-md"
+              >1</span
+            ></span
+          >
+        </div>
+        <ul class="py-1 text-sm">
+          <li class="flex p-2 text-sm gap-4 items-center hover:bg-gray-200">
+            <span class="text-3xl text-gray-400 text-center px-2">T</span>
+            <span>
+              <h2 class="font-bold">Heading 1</h2>
+              <p class="text-xs text-gray-400">Shortcut: type # + space</p>
+            </span>
+          </li>
+          <li class="flex p-2 text-sm gap-4 items-center hover:bg-gray-200">
+            <span class="text-3xl text-gray-400 text-center px-2">T</span>
+            <span>
+              <h2 class="font-bold">Expandable Heading 1</h2>
+              <p class="text-xs text-gray-400">Shortcut: type >># + space</p>
+            </span>
+          </li>
+        </ul>
+      </div>
     </section>
     <footer>
       <div
-        class="fixed buottom-6 right-6 rounded-md bg-gray-300 h-8 w-8 flex justify-center items-center"
+        class="fixed bottom-6 right-6 rounded-md bg-gray-300 h-8 w-8 flex justify-center items-center"
       >
         <span class="material-symbols-outlined opacity-55">help</span>
       </div>
