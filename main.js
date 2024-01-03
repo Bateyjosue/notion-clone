@@ -68,7 +68,7 @@ editor.addEventListener('click', (e) => {
     
   
     getLastElement().addEventListener('keypress', event => {
-  
+      event.stopPropagation();
       if (event.key === 'Enter') {
         if (event.target.value === '/1') {
           
@@ -78,10 +78,11 @@ editor.addEventListener('click', (e) => {
           popdown.classList.remove('hidden')
   
           heading.addEventListener('click', () => {
-            console.log(event.target);
             event.target.classList.add('text-5xl', 'py-2', 'font-bold')
             event.target.setAttribute('placeholder', 'Heading 1')
-            event.target.value = ''
+            if (event.target.value === '/1') {
+              event.target.value = ''
+            }
             popdown.classList.add('hidden')
           })
         }
