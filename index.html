@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notion Clone</title>
   </head>
-  <body>
-    <div id="app" class="text-5xl">Notion Clone</div>
+  <body class="flex flex-col">
+    <section class="grow-0">
+      <div class="wrapper">
+        <h1 class="text-4xl font-bold border-b-[1px] border-gray-400 py-4 my-4">
+          Front-end developer test project
+        </h1>
+        <p>
+          Your goal is to make a page that look like this one, and has the
+          ability to create H1 text text simply by typing / then 1, then typing
+          text, and hitting enter.
+        </p>
+      </div>
+    </section>
+    <section id="editor" class="grow my-4 min-h-96 max-h-full wrapper">
+      <div id="app" class="min-w-full min-h-full flex flex-col"></div>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
