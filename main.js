@@ -38,9 +38,11 @@ const handleCreateInput = () => {
 
       if (getLastElement().value !== '') {
         handleCreateInput();
+        getLastElement().focus()
       }
     }
   });
+  input.focus()
 };
 
 
