@@ -66,25 +66,32 @@ editor.addEventListener('click', (e) => {
       handleCreateInput();
     }
     
+    getLastElement().addEventListener('input', event => {
+      if (event.target.value === '/1') {
+        const popdown = document.querySelector('.popdown')
+        const heading = document.querySelector('.h1')
+
+        popdown.classList.remove('hidden')
+
+        heading.addEventListener('click', () => {
+          event.target.classList.add('text-5xl', 'py-2', 'font-bold')
+          event.target.setAttribute('placeholder', 'Heading 1')
+          if (event.target.value === '/1') {
+            event.target.value = ''
+          }
+          popdown.classList.add('hidden')
+        })
+      }
+    })
+    
+
     getLastElement().addEventListener('keypress', event => {
-      // event.stopPropagation();
       if (event.key === 'Enter') {
-        if (event.target.value === '/1') {
-          
-          const popdown = document.querySelector('.popdown')
-          const heading = document.querySelector('.h1')
-  
-          popdown.classList.remove('hidden')
-  
-          heading.addEventListener('click', () => {
-            event.target.classList.add('text-5xl', 'py-2', 'font-bold')
-            event.target.setAttribute('placeholder', 'Heading 1')
-            if (event.target.value === '/1') {
-              event.target.value = ''
-            }
-            popdown.classList.add('hidden')
-          })
+        if(getLastElement().value != ''){
+          // handleCreateInput();          
+          // console.log(event.target);
         }
+
       }
     })
   }
