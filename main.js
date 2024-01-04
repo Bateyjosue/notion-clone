@@ -15,20 +15,24 @@ const handleCreateInput = () => {
 
   input.addEventListener('input', (event) => {
 
+    const popdown = document.querySelector('.popdown');
     if (event.target.value === '/1') {
-      const popdown = document.querySelector('.popdown');
       const heading = document.querySelector('.h1');
-
+      
       popdown.classList.remove('hidden');
 
       heading.addEventListener('click', () => {
         event.target.classList.add('text-5xl', 'py-2', 'font-bold');
         event.target.setAttribute('placeholder', 'Heading 1');
+        // to not update all the heading 1 element once create one
         if (event.target.value === '/1') {
           event.target.value = '';
         }
         popdown.classList.add('hidden');
       });
+    }
+    else {
+      popdown.classList.add('hidden');
     }
   });
 
@@ -83,7 +87,7 @@ const handleCreateInput = () => {
       </div>
   `
 
-  editor.appendChild(section)
+editor.appendChild(section)
 
 // create onclick event to create the input on click in the app
 
