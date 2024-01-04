@@ -36,7 +36,7 @@ const handleCreateInput = () => {
     if (event.key === 'Enter') {
       event.preventDefault();
 
-      if (input.value !== '') {
+      if (getLastElement().value !== '') {
         handleCreateInput();
       }
     }
