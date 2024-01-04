@@ -6,13 +6,43 @@ const editor = document.querySelector('#editor')
 
 // create handle input
 
-const handleCreateInput = (event) => {
-    const input = document.createElement('input')
-    input.setAttribute('type', 'text')
-    input.setAttribute('placeholder', 'Type / for blocks, @ to link docs or people')
-    input.setAttribute('class', 'outline-0 border-none')
-    root.appendChild(input)
-}
+const handleCreateInput = () => {
+  const input = document.createElement('input');
+  input.setAttribute('type', 'text');
+  input.setAttribute('placeholder', 'Type / for blocks, @ to link docs or people');
+  input.setAttribute('class', 'outline-0 border-none');
+  root.appendChild(input);
+
+  input.addEventListener('input', (event) => {
+
+    if (event.target.value === '/1') {
+      const popdown = document.querySelector('.popdown');
+      const heading = document.querySelector('.h1');
+
+      popdown.classList.remove('hidden');
+
+      heading.addEventListener('click', () => {
+        event.target.classList.add('text-5xl', 'py-2', 'font-bold');
+        event.target.setAttribute('placeholder', 'Heading 1');
+        if (event.target.value === '/1') {
+          event.target.value = '';
+        }
+        popdown.classList.add('hidden');
+      });
+    }
+  });
+
+  input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+
+      if (input.value !== '') {
+        handleCreateInput();
+      }
+    }
+  });
+};
+
 
 // Create Popdown 
 
@@ -65,35 +95,6 @@ editor.addEventListener('click', (e) => {
     if(getLastElement() == undefined || getLastElement().value != ''){
       handleCreateInput();
     }
-    
-    getLastElement().addEventListener('input', event => {
-      if (event.target.value === '/1') {
-        const popdown = document.querySelector('.popdown')
-        const heading = document.querySelector('.h1')
-
-        popdown.classList.remove('hidden')
-
-        heading.addEventListener('click', () => {
-          event.target.classList.add('text-5xl', 'py-2', 'font-bold')
-          event.target.setAttribute('placeholder', 'Heading 1')
-          if (event.target.value === '/1') {
-            event.target.value = ''
-          }
-          popdown.classList.add('hidden')
-        })
-      }
-    })
-    
-
-    getLastElement().addEventListener('keypress', event => {
-      if (event.key === 'Enter') {
-        if(getLastElement().value != ''){
-          // handleCreateInput();          
-          // console.log(event.target);
-        }
-
-      }
-    })
   }
 });
 
